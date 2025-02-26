@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Equipos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header con menú de navegación -->
+    <header class="header">
+        <div class="menuContainer">
+            <a href="#" class="logo">
+                <img src="./Imagen/Logo_UniSalle-removebg-preview.png" alt="Icono Universidad" class="icono-universidad"> <!-- Icono de la universidad -->
+                UNIVERSIDAD DE LA SALLE
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="./Imagen/list.svg" class="menu-icono">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#informacion-basica">Estado del equipo</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#red">Identificación de la Universidad</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Inventario de Equipos</h1>
+
+        <!-- Sección 1: Información básica del equipo -->
+        <div id="informacion-basica" class="section">
+            <h2>1. Estado del equipo</h2>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="estadoDelEquipo">Estado del equipo</label>
+                        <input type="text" id="estadoDelEquipo" name="estadoDelEquipo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="placa">Placa</label>
+                        <input type="text" id="placa" name="placa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numero_serie">Número de Serie</label>
+                        <input type="text" id="numero_serie" name="numero_serie" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_de_dispositivo">Tipo de dispositivo</label>
+                        <input type="text" id="tipo_de_dispositivo" name="tipo_de_dispositivo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_adquisicion">Fecha de Placa</label>
+                        <input type="date" id="fecha_adquisicion" name="fecha_adquisicion" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="procesador">Procesador</label>
+                        <input type="text" id="procesador" name="procesador" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_ram">Tipo de RAM</label>
+                        <input type="text" id="tipo_ram" name="tipo_ram" placeholder="DDR3" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad_ram">Cantidad de RAM (GB)</label>
+                        <input type="number" id="cantidad_ram" name="cantidad_ram" placeholder="4 GB" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slots_ocupados">Slots Ocupados</label>
+                        <select name="slots_ocupados" id="slots_ocupados">
+                            <option value="no tiene">no tiene</option>
+                            <option value="1-de-4">1 de 1</option>
+                            <option value="1-de-4">1 de 2</option>
+                            <option value="2-de-4">2 de 2</option>
+                            <option value="1-de-4">1 de 4</option>
+                            <option value="2-de-4">2 de 4</option>
+                            <option value="3-de-4">3 de 4</option>
+                            <option value="4-de-4">4 de 4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_disco">Tipo de Disco principal</label>
+                        <select id="tipo_disco" name="tipo_disco" required>
+                            <option value="mecanico">Mecánico</option>
+                            <option value="solido">Sólido</option>
+                            <option value="nvme">NVMe</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad_almacenamiento">Almacenamiento Principal</label>
+                        <input type="number" id="cantidad_almacenamiento" name="cantidad_almacenamiento" placeholder="500 GB">
+                        <select name="cantidad_almacenamiento" id="cantidad_almacenamiento">
+                            <option value="no tiene">no tiene</option>
+                            <option value="160 GB">160 GB</option>
+                            <option value="250 GB">250 GB</option>
+                            <option value="320 GB">320 GB</option>
+                            <option value="500 GB">500 GB</option>
+                            <option value="1 TB">1 TB</option>
+                            <option value="2 TB">2 TB</option>
+                            <option value="3 TB">3 TB</option>
+                            <option value="4 TB">4 TB</option>
+                            <option value="5 TB">5 TB</option>
+                            <option value="6 TB">6 TB</option>
+                            <option value="7 TB">7 TB</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_disco2">Tipo de Disco Secundario</label>
+                        <select id="tipo_disco2" name="tipo_disco2" required>
+                            <option value="mecanico">Mecánico</option>
+                            <option value="solido">Sólido</option>
+                            <option value="nvme">NVMe</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad_almacenamiento2">Almacenamiento Secundario</label>
+                        <input type="number" id="cantidad_almacenamiento2" name="cantidad_almacenamiento2" placeholder="500 GB">
+                        <select name="cantidad_almacenamiento2" id="cantidad_almacenamiento2">
+                            <option value="no tiene">no tiene</option>
+                            <option value="160 GB">160 GB</option>
+                            <option value="250 GB">250 GB</option>
+                            <option value="320 GB">320 GB</option>
+                            <option value="500 GB">500 GB</option>
+                            <option value="1 TB">1 TB</option>
+                            <option value="2 TB">2 TB</option>
+                            <option value="3 TB">3 TB</option>
+                            <option value="4 TB">4 TB</option>
+                            <option value="5 TB">5 TB</option>
+                            <option value="6 TB">6 TB</option>
+                            <option value="7 TB">7 TB</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sistema_operativo">Sistema Operativo</label>
+                        <input type="text" id="sistema_operativo" name="sistema_operativo" placeholder="Windows...">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección 2: Características del equipo -->
+        <div id="caracteristicas" class="section">
+            <h2>2. Ubicación Del Equipo</h2>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="sede">Sede</label>
+                        <input type="text" id="sede" name="sede" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Facultad">Facultad De Dependencia</label>
+                        <input type="text" id="Facultad" name="Facultad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Edifico">Edificio</label>
+                        <input type="text" id="Edificio" name="Edificio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Piso">Piso</label>
+                        <input type="text" id="Piso" name="Piso" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Oficina">Oficina</label>
+                        <input type="text" id="Oficina" name="Oficina" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección 3: Especificación de la Red -->
+        <div id="red" class="section">
+            <h2>3. Especificación de la Red</h2>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="nombre_equipo">Nombre del Equipo</label>
+                        <input type="text" id="nombre_equipo" name="nombre_equipo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_red">Tipo de Red</label>
+                        <select name="tipo_red" id="tipo_red">
+                            <option value="ETHERNET">ETHERNET</option>
+                            <option value="WIFI">WIFI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dominio">Dominio</label>
+                        <input type="text" id="dominio" name="dominio" placeholder="LA SALLE">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="UsuarioLocal">Usuario Local</label>
+                        <input type="text" id="UsuarioLocal" name="UsuarioLocal" placeholder="Usuario">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ip">IP</label>
+                        <input type="text" id="ip" name="ip" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="config_ip">IP Automática o Manual</label>
+                        <select id="config_ip" name="config_ip" required>
+                            <option value="automatica">Automática</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mac">MAC</label>
+                        <input type="text" id="mac" name="mac" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dns">DNS</label>
+                        <input type="text" id="dns" name="dns" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección 4: Identificación del equipo en la universidad -->
+        <div class="section">
+            <h2>4. Datos Del Usuario</h2>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="ResponsableDominio">Responsable Dominio</label>
+                        <input type="text" id="ResponsableDominio" name="ResponsableDominio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="NombreCompletoResponsable">Nombre Completo Responsable</label>
+                        <input type="text" id="NombreCompletoResponsable" name="NombreCompletoResponsable" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CorreoResponsable">Correo Responsable</label>
+                        <input type="text" id="CorreoResponsable" name="CorreoResponsable" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="persona_encargada">Persona Encargada</label>
+                        <input type="text" id="persona_encargada" name="persona_encargada" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area_encargada">Área Encargada</label>
+                        <input type="text" id="area_encargada" name="area_encargada" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ResponsableDelEquipo">¿El Responsable Usa El Equipo?</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="UsoMasUnaPersona">¿Lo Usa Más De Una Persona?</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Usuario">Usuario</label>
+                        <input type="text" id="Usuario" name="Usuario">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="UsuarioTex">UsuarioTex</label>
+                        <input type="text" id="UsuarioTex" name="UsuarioTex">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CorreoUsuario">Correo Usuario</label>
+                        <input type="email" id="CorreoUsuario" name="CorreoUsuario" placeholder="Usuario unisalle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CargoDelUsuario">Cargo Del Usuario</label>
+                        <input type="text" id="CargoDelUsuario" name="CargoDelUsuario">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="AreaUsuario">Área Usuario</label>
+                        <input type="text" id="AreaUsuario" name="AreaUsuario">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="UsoDelEquipo">Uso Del Equipo</label>
+                        <input type="text" id="UsoDelEquipo" name="UsoDelEquipo">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección 5: Otra Información -->
+        <div class="section">
+            <h2>5. Otra Información</h2>
+            <form>
+                <div class="form-column">
+                    <div class="form-group">
+                        <label for="agenteTM">Agente TM</label>
+                        <label class="switch">
+                            <input type="checkbox" id="agenteTM" name="agenteTM">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="softwareEspecial">Software Especial</label>
+                        <textarea id="softwareEspecial" name="softwareEspecial" rows="4" placeholder="Escribe aquí cualquier software especial relacionado con el equipo"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones</label>
+                        <textarea id="observaciones" name="observaciones" rows="4" placeholder="Escribe aquí cualquier observación relevante sobre el equipo"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adjuntarArchivo">Adjuntar Archivos</label>
+                        <input type="file" id="adjuntarArchivo" name="adjuntarArchivo" accept="image/*, .pdf, .docx, .xlsx">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Botón para guardar -->
+        <div class="submit-button">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+
+</body>
+</html>
