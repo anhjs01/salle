@@ -1,5 +1,5 @@
 body {
-  width: 100%;
+  width: 98%;
   /* height: 100%; */
   /* Add your background pattern here */
   background: linear-gradient(
@@ -272,5 +272,140 @@ margin-top: 10px;
   .form-column {
       grid-template-columns: 1fr; /* En pantallas pequeñas, los elementos se apilan en una sola columna */
       width: 100%;
+  }
+}
+/* pantalla 2 */
+
+/* Estilos Generales */
+
+
+
+
+
+.search-bar {
+  width: 99%;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filters select, .refresh {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.refresh {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+ 
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #03264b96;
+  color: white;
+}
+h4{
+  color: white;
+}
+p{
+  color: white;
+}
+h3{
+  text-align: center;
+  color: white;
+}
+.summary {
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.summary-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.summary-section {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  background: #03264b96;
+  border-radius: 5px;
+}
+
+.summary-section h3 {
+  text-align: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit {
+  background: #28a745;
+  color: white;
+}
+
+.view {
+  background: #17a2b8;
+  color: white;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+  }
+  .menuContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+  .filters {
+      flex-direction: column;
+  }
+  
+  /* Hacer las tablas responsivas */
+  table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+  
+  th, td {
+      min-width: 100px;
+  }
+
+  /* Hacer los divs de resumen apilarse en pantallas pequeñas */
+  .summary-sections {
+      flex-direction: column;
   }
 }

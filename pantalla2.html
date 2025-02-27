@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Equipos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menuContainer">
+            <a href="#" class="logo">
+                <img src="./Imagen/Logo_UniSalle-removebg-preview.png" alt="Icono Universidad" class="icono-universidad">
+                UNIVERSIDAD DE LA SALLE
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="./Imagen/list.svg" class="menu-icono">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#estado-equipo">Estado del equipo</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#identificacion">Identificación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Gestión de Equipos</h1>
+        <input type="text" placeholder="Buscar placa, serial, nombre Equipo, IP, responsable, usuario" class="search-bar">
+        <div class="filters">
+            <select><option>Estado</option></select>
+            <select><option>Tipo</option></select>
+            <select><option>Sede</option></select>
+            <select><option>Dominio</option></select>
+            <select><option>Uso del equipo</option></select>
+            <button class="refresh">Refrescar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Tipo</th>
+                    <th>Placa</th>
+                    <th>Serial</th>
+                    <th>Sede</th>
+                    <th>Nombre del equipo</th>
+                    <th>IP</th>
+                    <th>Dominio</th>
+                    <th>Responsable</th>
+                    <th>Usuario</th>
+                    <th>Uso del equipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Activo</td>
+                    <td>Laptop</td>
+                    <td>123456</td>
+                    <td>ABC123</td>
+                    <td>Sede Central</td>
+                    <td>Equipo 1</td>
+                    <td>192.168.1.1</td>
+                    <td>Empresa.com</td>
+                    <td>Juan Pérez</td>
+                    <td>j.perez</td>
+                    <td>Oficina</td>
+                </tr>
+                <tr>
+                    <td>En Uso</td>
+                    <td>PC Escritorio</td>
+                    <td>654321</td>
+                    <td>XYZ789</td>
+                    <td>Sucursal Norte</td>
+                    <td>Equipo 2</td>
+                    <td>192.168.1.2</td>
+                    <td>Corporativo</td>
+                    <td>Maria López</td>
+                    <td>m.lopez</td>
+                    <td>Administrativo</td>
+                </tr>
+                <tr>
+                    <td>Inactivo</td>
+                    <td>Servidor</td>
+                    <td>789012</td>
+                    <td>LMN456</td>
+                    <td>Sede Sur</td>
+                    <td>Servidor 1</td>
+                    <td>10.0.0.1</td>
+                    <td>RedInterna</td>
+                    <td>Pedro Gómez</td>
+                    <td>p.gomez</td>
+                    <td>DataCenter</td>
+                </tr>
+                <tr>
+                    <td>Reparación</td>
+                    <td>Tablet</td>
+                    <td>456789</td>
+                    <td>QWE987</td>
+                    <td>Sede Este</td>
+                    <td>Tablet A</td>
+                    <td>192.168.1.3</td>
+                    <td>Intranet</td>
+                    <td>Ana Torres</td>
+                    <td>a.torres</td>
+                    <td>Movilidad</td>
+                </tr>
+                <tr>
+                    <td>Asignado</td>
+                    <td>Laptop</td>
+                    <td>321654</td>
+                    <td>UIO654</td>
+                    <td>Sucursal Oeste</td>
+                    <td>Equipo 5</td>
+                    <td>192.168.1.4</td>
+                    <td>Oficial</td>
+                    <td>Luis Fernández</td>
+                    <td>l.fernandez</td>
+                    <td>Trabajo Remoto</td>
+                </tr>
+                <tr>
+                    <td>Activo</td>
+                    <td>Laptop</td>
+                    <td>123456</td>
+                    <td>ABC123</td>
+                    <td>Sede Central</td>
+                    <td>Equipo 1</td>
+                    <td>192.168.1.1</td>
+                    <td>Empresa.com</td>
+                    <td>Juan Pérez</td>
+                    <td>j.perez</td>
+                    <td>Oficina</td>
+                </tr>
+                <tr>
+                    <td>En Uso</td>
+                    <td>PC Escritorio</td>
+                    <td>654321</td>
+                    <td>XYZ789</td>
+                    <td>Sucursal Norte</td>
+                    <td>Equipo 2</td>
+                    <td>192.168.1.2</td>
+                    <td>Corporativo</td>
+                    <td>Maria López</td>
+                    <td>m.lopez</td>
+                    <td>Administrativo</td>
+                </tr>
+                <tr>
+                    <td>Inactivo</td>
+                    <td>Servidor</td>
+                    <td>789012</td>
+                    <td>LMN456</td>
+                    <td>Sede Sur</td>
+                    <td>Servidor 1</td>
+                    <td>10.0.0.1</td>
+                    <td>RedInterna</td>
+                    <td>Pedro Gómez</td>
+                    <td>p.gomez</td>
+                    <td>DataCenter</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="summary">
+            <h3>Resumen del equipo con placa</h3>
+            <div class="summary-sections">
+                <div class="summary-section">
+                    <h4>Datos de Creación</h4>
+                    <p>Fecha Creación: 01/01/2023</p>
+                    <p>Autor: Admin</p>
+                    <p>Modificación: 02/02/2023</p>
+                    <p>Editor: Admin</p>
+                </div>
+                <div class="summary-section">
+                    <h4>Equipo</h4>
+                    <p>Marca: Dell</p>
+                    <p>Modelo: XPS 15</p>
+                    <p>Sistema Operativo: Windows 10</p>
+                </div>
+                <div class="summary-section">
+                    <h4>Ubicación y Red</h4>
+                    <p>Sede: Central</p>
+                    <p>Ubicación: Oficina 101</p>
+                    <p>MAC: 00:1A:2B:3C:4D:5E</p>
+                </div>
+                <div class="summary-section">
+                    <h4>Usuario</h4>
+                    <p>Responsable: Juan Pérez</p>
+                    <p>Usuario: j.perez</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="edit"onclick="window.location.href='index.html'">Editar</button>
+            <button class="view" >Ver</button>
+        </div>
+    </div>
+</body>
+</html>
