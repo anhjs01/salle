@@ -293,16 +293,8 @@ margin-top: 10px;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-.filters select, .refresh {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.refresh {
-  background: #007bff;
-  color: white;
-  cursor: pointer;
+#refrescar{
+  width: 2%;
 }
 
 table {
@@ -371,20 +363,17 @@ h3{
 }
 
 .edit {
-  background: #28a745;
+  background: #2d8a42bd;
   color: white;
 }
 
 .view {
-  background: #17a2b8;
+  background: #0e889bd0;
   color: white;
 }
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
-  .navbar ul {
-      flex-direction: column;
-  }
   .menuContainer {
       flex-direction: column;
       align-items: center;
@@ -408,4 +397,85 @@ h3{
   .summary-sections {
       flex-direction: column;
   }
+}
+/* pantalla3 */
+.title-p3{
+  width: 80%;
+  margin: auto;
+  background-color: #03264bc0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.container-p3 {
+  width: 80%;
+  margin: auto;
+  background-color: #33313194;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos arriba */
+  gap: 20px; /* Espacio entre columnas */
+}
+
+.DatosEquipo {
+  flex: 1; /* Ocupa más espacio a la izquierda */
+  background-color: #03264b96;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.right-container {
+  flex: 1; /* Ocupa menos espacio a la derecha */
+  display: flex;
+  flex-direction: column;
+  gap:25px; /* Espacio entre los divs apilados */
+  width: 100%;
+}
+
+.right-container > div {
+  background-color: #03264b96;
+  padding: 15px;
+  border-radius: 8px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.boton-p3 {
+  background-color: #02254b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.boton-p3:hover {
+  background-color: #09448383;
+}
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+
+  .container-p3 {
+      flex-direction: column;
+      align-items: center;
+  }
+  .filters {
+      flex-direction: column;
+  }
+  
+  /* Hacer las tablas responsivas */
+  table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+  
+  th, td {
+      min-width: 100px;
+  }
+
 }
