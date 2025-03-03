@@ -457,6 +457,19 @@ h3{
     overflow-x: auto;
     white-space: nowrap;
   }
+  @media (max-width: 1300px) {
+    .form-column {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .container-p3 {
+      display: block;
+      width: 80%;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
 
 }
 @media (max-width: 600px) {
